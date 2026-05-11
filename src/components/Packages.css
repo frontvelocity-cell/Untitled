@@ -1,0 +1,166 @@
+.packages {
+  min-height: calc(100vh - 160px);
+  padding: 40px 0;
+}
+
+.packages-subtitle {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.package-card {
+  background-color: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  border-color: #D7AF00;
+}
+
+.package-card.popular {
+  border-color: #D7AF00;
+  transform: scale(1.05);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #D7AF00;
+  color: #000;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.package-header {
+  margin-bottom: 30px;
+}
+
+.package-name {
+  color: #D7AF00;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.package-price {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.price-period {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.package-features {
+  margin-bottom: 30px;
+}
+
+.package-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.package-features li {
+  color: #ccc;
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+  position: relative;
+  padding-left: 20px;
+}
+
+.package-features li:before {
+  content: "✓";
+  color: #D7AF00;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.package-features li:last-child {
+  border-bottom: none;
+}
+
+.package-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.packages-info {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.packages-info h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.info-item {
+  background-color: #1a1a1a;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.info-item h4 {
+  color: #D7AF00;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.info-item p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .package-card.popular {
+    transform: none;
+  }
+  
+  .package-card:hover {
+    transform: none;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
